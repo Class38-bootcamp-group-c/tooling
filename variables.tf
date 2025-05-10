@@ -75,23 +75,23 @@ variable "subnet_id" {
 #   default     = "default-vpc-08dcf780b5e752f2c"
 # }
 
-variable "s3_bucket" {
-  description = "The name of the S3 bucket for storing Terraform state"
-  type        = string
-  default     = "class38-terraform-backend-bucket32"
-}
+#variable "s3_bucket" {
+  #description = "The name of the S3 bucket for storing Terraform state"
+  #type        = string
+  #default     = "class38-terraform-backend-bucket32"
+#}
 
-variable "bucket_name" {
+#variable "bucket_name" {
 
-}
-variable "dynamodb_table" {
-  description = "The name of the DynamoDB table for state locking"
-  type        = string
-  default     = "terraform-state-locking"
-}
+#}
+#variable "dynamodb_table" {
+  #description = "The name of the DynamoDB table for state locking"
+  #type        = string
+  #default     = "terraform-state-locking"
+#}
 
-variable "main-region" {
-  description = "The AWS region to deploy resources"
-  type        = string
-  default     = "us-east-2"
-}
+#variable "main-region" {
+  #description = "The AWS region to deploy resources"
+  #type        = string
+  #default     = "us-east-2"
+#}
