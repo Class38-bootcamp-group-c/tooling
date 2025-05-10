@@ -1,35 +1,35 @@
-module "jenkins-server" {
-  source        = "./modules/jenkins-server"
-  ami_id        = var.ami_id
-  instance_type = var.instance_type
-  key_name      = var.key_name
-  main-region   = var.main-region
-}
+#module "jenkins-server" {
+  #source        = "./modules/jenkins-server"
+  #ami_id        = var.ami_id
+  #instance_type = var.instance_type
+  #key_name      = var.key_name
+  #main-region   = var.main-region
+#}
 
-module "s3-bucket" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "4.5.0"
-  bucket  = var.bucket_name
-  versioning = {
-    enabled = true
-  }
-}
+#module "s3-bucket" {
+  #source  = "terraform-aws-modules/s3-bucket/aws"
+  #version = "4.5.0"
+  #bucket  = var.bucket_name
+  #versioning = {
+    #enabled = true
+  #}
+#}
 
-module "terraform-node" {
-  source        = "./modules/terraform-node"
-  ami_id        = var.ami_id
-  instance_type = var.instance_type
-  key_name      = var.key_name
-  main-region   = var.main-region
-}
+#module "terraform-node" {
+  #source        = "./modules/terraform-node"
+  #ami_id        = var.ami_id
+  #instance_type = var.instance_type
+  #key_name      = var.key_name
+  #main-region   = var.main-region
+#}
 
-module "maven-sonarqube-server" {
-  source            = "./modules/maven-sonarqube-server"
-  ami_id            = var.ami_id
-  instance_type     = var.instance_type
-  key_name          = var.key_name
-  security_group_id = var.security_group_id
-  subnet_id         = var.subnet_id
+#module "maven-sonarqube-server" {
+  #source            = "./modules/maven-sonarqube-server"
+  #ami_id            = var.ami_id
+  #instance_type     = var.instance_type
+  #key_name          = var.key_name
+  #security_group_id = var.security_group_id
+  #subnet_id         = var.subnet_id
   # main-region   = var.main-region
 
   #   db_name              = var.db_name
@@ -37,7 +37,7 @@ module "maven-sonarqube-server" {
   #   db_password          = var.db_password
   #   db_subnet_group      = var.db_subnet_group
   #   db_security_group_id = var.db_security_group_id
-}
+#}
 
 # # module "s3_dynamodb" {
 # #   source = "./modules/s3-dynamodb"

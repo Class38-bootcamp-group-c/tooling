@@ -1,29 +1,29 @@
-variable "ami_id" {
+#variable "ami_id" {
   description = "The AMI ID for the instances"
   type        = string
   default     = "ami-0b8c6b923777519db"
-}
+#}
 
-variable "instance_type" {
-  description = "The instance type for the instances"
-  type        = string
-  default     = "t2.large"
-}
+#variable "instance_type" {
+  #description = "The instance type for the instances"
+  #type        = string
+  #default     = "t2.large"
+#}
 
 
-variable "key_name" {
-  description = "The key name for the instances"
-  type        = string
-  default     = "DevOps_Train2024"
-}
+#variable "key_name" {
+  #description = "The key name for the instances"
+  #type        = string
+  #default     = "DevOps_Train2024"
+#}
 
 ###########################
 #Sonaqube instance
 ##########################
-variable "security_group_id" {
-  type    = string
-  default = "sg-07b8b3043804ede33"
-}
+#variable "security_group_id" {
+  #type    = string
+  #default = "sg-07b8b3043804ede33"
+#}
 
 # variable "subnet_id" {
 #   type    = string
@@ -78,7 +78,7 @@ variable "subnet_id" {
 variable "s3_bucket" {
   description = "The name of the S3 bucket for storing Terraform state"
   type        = string
-  default     = "terraform-state-bucket-fusi"
+  default     = "class38-terraform-backend-bucket32"
 }
 
 variable "bucket_name" {
@@ -87,11 +87,11 @@ variable "bucket_name" {
 variable "dynamodb_table" {
   description = "The name of the DynamoDB table for state locking"
   type        = string
-  default     = "terraform-lock-table"
+  default     = "terraform-state-locking"
 }
 
 variable "main-region" {
   description = "The AWS region to deploy resources"
   type        = string
-  default     = "us-west-2"
+  default     = "us-east-2"
 }
